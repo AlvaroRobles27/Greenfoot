@@ -27,7 +27,9 @@ public class FruitPlanet extends World
         addObject(new Bee(), 100, 0);
 
         // Create a row of 5 bees.
+        createBeeRow(5, 100);
         createBeeRow(5, 200);
+        createBeeRow(5, 300);
     }
 
     /**
