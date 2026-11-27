@@ -22,14 +22,27 @@ public class FruitPlanet extends World
 
         // Add the player to the world.
         addObject(babyAdventurer, 0, 0);
+        
+        //Creo una fila de abejas separadas de la misma distacia
+        
+        int initX = 30;
+        int initY = 50;
+        
+        
+        crearFilaAbejas(5, initY);
+        initY = initY + 50;
+        crearFilaAbejas(5, initY);
+        initY = initY + 50;
+        crearFilaAbejas(5, initY);
+        initY = initY + 50;
+        
+        showText("value of y " + initY, 100, 100);
+        
+        for(int i = 0; i < 4; i++){
+        crearFilaAbejas(5, initY);
+        initY = initY + 50;
+        }
 
-        // Add a bee.
-        addObject(new Bee(), 100, 0);
-
-        // Create a row of 5 bees.
-        createBeeRow(5, 100);
-        createBeeRow(5, 200);
-        createBeeRow(5, 300);
     }
 
     /**
@@ -38,7 +51,7 @@ public class FruitPlanet extends World
      * @param cantidad Number of bees to create.
      * @param altura Vertical position of the bees.
      */
-    public void createBeeRow(int cantidad, int altura)
+    public void crearFilaAbejas(int cantidad, int altura)
     {
         for (int i = 0; i < cantidad; i++)
         {
